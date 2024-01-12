@@ -3,7 +3,13 @@
   Note: the input string is case-insensitive which means 'Nan' is a palindrom as 'N' and 'n' are considered case-insensitive.
 */
 
-function isPalindrome(str) {
+function isPalindrome(str) { //fix for case sensitivity
+  const len = str.length 
+  for(let i=0;i<len/2;i++){
+    if(str[i] != str[len - i-1]){
+      return false
+    }
+  }
   return true;
 }
 
